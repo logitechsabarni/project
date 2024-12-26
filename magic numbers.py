@@ -2,20 +2,19 @@ import random
 
 
 def number_guessing_game():
-    # Define the range for the number
+    
     lower_bound = 1
     upper_bound = 100
 
-    # Generate a random number between lower_bound and upper_bound
+    
     secret_number = random.randint(lower_bound, upper_bound)
 
-    # Initialize the number of attempts
+    
     attempts = 0
 
     print(f"Welcome to the Number Guessing Game!")
     print(f"I'm thinking of a number between {lower_bound} and {upper_bound}.")
-
-    # Loop until the player guesses correctly
+    
     while True:
         try:
             # Get the player's guess
@@ -34,7 +33,5 @@ def number_guessing_game():
                 break  # Exit the loop if the guess is correct
         except ValueError:
             print("Please enter a valid integer.")
-
-
-# Run the game
+            
 number_guessing_game()
