@@ -1,20 +1,11 @@
 import random
-
-
 def number_guessing_game():
-    
     lower_bound = 1
     upper_bound = 100
-
-    
     secret_number = random.randint(lower_bound, upper_bound)
-
-    
     attempts = 0
-
     print(f"Welcome to the Number Guessing Game!")
     print(f"I'm thinking of a number between {lower_bound} and {upper_bound}.")
-    
     while True:
         try:
             # Get the player's guess
