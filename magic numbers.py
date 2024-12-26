@@ -30,7 +30,7 @@ def number_guessing_game():
                 print("Too high! Try again.")
             else:
                 print(f"Congratulations! You've guessed the number {secret_number} in {attempts} attempts.")
-                break  # Exit the loop if the guess is correct
+                break  
         except ValueError:
             print("Please enter a valid integer.")
             
