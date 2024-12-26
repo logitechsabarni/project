@@ -8,13 +8,8 @@ def number_guessing_game():
     print(f"I'm thinking of a number between {lower_bound} and {upper_bound}.")
     while True:
         try:
-            # Get the player's guess
             guess = int(input("Enter your guess: "))
-
-            # Increment the attempt counter
             attempts += 1
-
-            # Check if the guess is correct
             if guess < secret_number:
                 print("Too low! Try again.")
             elif guess > secret_number:
@@ -24,5 +19,4 @@ def number_guessing_game():
                 break  
         except ValueError:
             print("Please enter a valid integer.")
-            
 number_guessing_game()
