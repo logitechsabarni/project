@@ -1,38 +1,7 @@
-import random
-
-def number_guessing_game():
-  
-    lower_bound = 1
-    upper_bound = 100
-    
-  
-    secret_number = random.randint(lower_bound, upper_bound)
-    
-  
-    attempts = 0
-    
-    print(f"Welcome to the Number Guessing Game!")
-    print(f"I'm thinking of a number between {lower_bound} and {upper_bound}.")
-    
-    while True:
-        try:
-            # Get the player's guess
-            guess = int(input("Enter your guess: "))
-            
-            # Increment the attempt counter
-            attempts += 1
-            
-            # Check if the guess is correct
-            if guess < secret_number:
-                print("Too low! Try again.")
-            elif guess > secret_number:
-                print("Too high! Try again.")
-            else:
-                print(f"Congratulations! You've guessed the number {secret_number} in {attempts} attempts.")
-                break  # Exit the loop if the guess is correct
-        except ValueError:
-            print("Please enter a valid integer.")
-    
-
-number_guessing_game()
-
+In Python, randint is a function from the random module that generates a random integer within a specified range.
+Here's a simple number guessing game in Python. The program will randomly choose a number between a specified range, and the player will try to guess it.
+1. The program selects a random number between 1 and 100.
+2. The user is prompted to guess the number.
+3. If the guess is too low or too high, the program gives feedback to the user.
+4. The game continues until the user guesses the correct number, and the program will display how many attempts it took to guess the number.
+We can modify the `lower_bound` and `upper_bound` variables to adjust the difficulty of the game.
